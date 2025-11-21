@@ -1,0 +1,12 @@
+cmake_minimun_required(VERSION 3.10)
+
+project (gungiEngine C)
+
+file (GLOB_RECURSE SRC_FILES 
+	"${CMAKE_CURRENT_SOURCE_DIR}/src/*.c")
+
+add_executable (gungi ${SRC_FILES})
+
+target_include_directories(gungi PUBLIC
+	"${CMAKE_CURRENT_SOURCE_DIR}/include")
+
